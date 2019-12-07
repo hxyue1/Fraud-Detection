@@ -1,6 +1,12 @@
 # Fraud-Detection
 
-This is code repo documenting my various attempts to predict transaction fraud using data provided by Vesta Corporation in Kaggle's IEEE-CIS Fraud Detection competition. The notebooks can be broken up into two phases based on the maturity of my analysis.
+This is code repo documenting my various attempts to predict transaction fraud using data provided by Vesta Corporation in Kaggle's IEEE-CIS Fraud Detection competition. 
+
+## Quick summary and main findings
+
+My best performing model was with a tuned xgboost model trained on the transaction data with some preprocessing. This resulted in an AUC of 0.916 on the public leaderboard. NaNs were dealt with through a combination of random shuffling and forward filling. Some features were added through aggregation statistics, but what drove the most improvement on the baseline xgboost model was the removal of unnecessary features. These were identified through permutation importance.
+
+The notebooks can be broken up into two phases based on the maturity of my analysis.
 
 ## Phase I
 
